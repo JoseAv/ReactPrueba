@@ -1,0 +1,19 @@
+.ContainerHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.TitleHeader {
+    color: #96C2DB;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.InputHeader {
+    height: 28px;
+    width: 60%;
+}
