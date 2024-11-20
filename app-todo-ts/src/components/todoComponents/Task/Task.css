@@ -65,3 +65,10 @@
     display: flex;
     gap: 10%;
 }
+
+
+.green {
+    background-color: rgb(97, 170, 97);
+    color: white;
+}
+

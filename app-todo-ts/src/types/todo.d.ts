@@ -3,6 +3,7 @@ export interface typeTodo {
     nameTask: string,
     id: string
     edit: boolean
+    completed: boolean
 }
 
 
