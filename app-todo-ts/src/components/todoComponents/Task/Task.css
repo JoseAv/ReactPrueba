@@ -1,0 +1,67 @@
+.containerMain {
+    width: 400px;
+    margin-top: 2%;
+}
+
+
+.containerTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.nameTask {
+    font-size: 18px;
+    font-weight: 100;
+    color: #0e90d2;
+
+
+}
+
+.idTask {
+    font-size: 10px;
+    font-weight: 100;
+    color: #37667e;
+}
+
+.spanCodeTask {
+    color: black;
+    font-weight: bold;
+}
+
+.my-button {
+    padding: 5px 10px;
+    background-color: #0e90d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.my-button:hover {
+    background-color: #00aaff;
+}
+
+.my-button:active {
+    background-color: #00aaff;
+}
+
+.red {
+    background: rgb(221, 99, 99);
+    color: rgb(29, 28, 28);
+}
+
+.red:hover {
+    background-color: rgb(226, 45, 45)
+}
+
+.red:active {
+    background-color: rgb(230, 33, 33)
+}
+
+.containerButtonTask {
+    display: flex;
+    gap: 10%;
+}
