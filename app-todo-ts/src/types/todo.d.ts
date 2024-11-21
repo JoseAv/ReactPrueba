@@ -16,6 +16,8 @@ export interface typesFilterButton {
     all: string,
     completed: string,
     deleted: string,
+    incomplet: string
+
 }
 
 export type TypesFiltes = typeof typesFilters[keyof typeof typesFilters]

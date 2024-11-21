@@ -22,7 +22,8 @@ export const dataInitial = [
 export const FilterButton: typesFilterButton = {
     all: 'All',
     completed: 'Completed',
-    deleted: 'Deleted'
+    deleted: 'Deleted',
+    incomplet: 'Incomplet'
 }
 
 
