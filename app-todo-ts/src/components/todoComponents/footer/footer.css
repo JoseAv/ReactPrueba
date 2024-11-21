@@ -1,0 +1,33 @@
+    .containerFooter {
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .Footer {
+
+        .my-button {
+            padding: 5px 10px;
+            background-color: #5694b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .my-button:hover {
+            background-color: #00aaff;
+        }
+
+        .my-button:active {
+            background-color: #00aaff;
+        }
+
+        .my-button:focus {
+            background-color: #00aaff;
+        }
+
+    }

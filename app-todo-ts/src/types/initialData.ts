@@ -1,3 +1,5 @@
+import { typesFilterButton } from "./todo"
+
 export const dataInitial = [
     {
         nameTask: 'Te amo Alejandra',
@@ -8,7 +10,7 @@ export const dataInitial = [
         nameTask: 'Siiuuu',
         id: '2',
         completed: false
-        
+
     },
     {
         nameTask: 'Tarea React',
@@ -16,3 +18,12 @@ export const dataInitial = [
         completed: false
     },
 ]
+
+export const FilterButton: typesFilterButton = {
+    all: 'All',
+    completed: 'Completed',
+    deleted: 'Deleted'
+}
+
+
+

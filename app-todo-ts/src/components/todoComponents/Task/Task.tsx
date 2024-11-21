@@ -7,9 +7,10 @@ interface typesTask extends typesTodo {
     saveUpdateTodo: (todo: typeTodo, value: React.KeyboardEvent<HTMLInputElement>) => void
     isEdit: (todo: typeTodo) => void
     updateTodo: (evn: React.ChangeEvent<HTMLInputElement>, id: string) => void
+    completedTodo: (todo: typeTodo) => void
 }
 
-export const Task: React.FC<typesTask> = ({ dataTodo, deleteTodo, isEdit, saveUpdateTodo, updateTodo }) => {
+export const Task: React.FC<typesTask> = ({ dataTodo, deleteTodo, isEdit, saveUpdateTodo, updateTodo, completedTodo }) => {
 
 
     return (
@@ -17,17 +18,25 @@ export const Task: React.FC<typesTask> = ({ dataTodo, deleteTodo, isEdit, saveUp
             {
                 dataTodo.map((ele: typeTodo) => {
                     return (
-
                         <div key={ele.id} className="containerTask">
                             <div>
-                                {ele.edit === true ? <input type="text" value={ele.nameTask} onChange={(evn) => updateTodo(evn, ele.id)} onKeyDown={(evn) => saveUpdateTodo(ele, evn)} /> : <p className="nameTask">{ele.nameTask}</p>}
+                                {ele.edit === true
+                                    ?
+                                    <input type="text" value={ele.nameTask} onChange={(evn) => updateTodo(evn, ele.id)} onKeyDown={(evn) => saveUpdateTodo(ele, evn)} />
+                                    :
+                                    <p className={ele.completed ? 'nameTask completed' : 'nameTask'}>{ele.nameTask}</p>
+                                }
+
                                 <p className="idTask"><span className="spanCodeTask">Codigo</span>: {ele.id}</p>
 
                             </div>
                             <div className="containerButtonTask">
-                                <button className="my-button red" onClick={() => deleteTodo(ele.id)}>Eliminar</button>
+                                {ele.completed
+                                    ? <button className="my-button red" onClick={() => deleteTodo(ele.id)}>Eliminar</button>
+                                    : null
+                                }
                                 <button className="my-button " onClick={() => isEdit(ele)}>{ele.edit ? 'Editando' : 'Editar'}</button>
-                                <button className="my-button green" onClick={()=> ''}>Completar</button>
+                                <button className="my-button green" onClick={() => completedTodo(ele)}>{ele.completed ? 'No Completar' : 'Completar'}</button>
                             </div>
 
                         </div>
